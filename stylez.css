@@ -69,3 +69,54 @@ button:hover {
     width: 100%;
   }
 }
+
+
+/*dashboard styles*/
+.dash {
+  border: 1px solid #f1f1f1;
+  border-radius: 25px;
+  height: 95%;
+  width: 97%;
+  position: fixed;
+  margin: auto;
+  display: flex;
+  overflow: auto;
+}
+
+.sidebar {
+	background-color: #264653;
+	height: 100%;
+	width: 20%;
+	position: relative;
+	z-index: 1;
+	padding-top: 20px;
+	overflow-x: hidden;
+	top: 0;
+	left: 0;
+  border-radius: 25px;
+}
+
+.property_card {
+  background-color: darkslategray;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+.cards_display {
+  border: 1px solid #f1f1f1;
+  position: relative;
+  border-radius: 25px;
+  margin-top: 1%;
+  height: 98%;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  visibility: auto;
+  overflow: scroll;
+}
+
