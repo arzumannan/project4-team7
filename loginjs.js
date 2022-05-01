@@ -14,11 +14,31 @@ function checkAdmin(){
 function showFav(){
 
     document.getElementById("buy_cards").style.display = "none";
-    document.getElementById("favorite_cards").style.display = "block";
+    document.getElementById("favorite_cards").style.display = "flex";
+    document.getElementById("listings").style.display = "none";
+    document.getElementById("sell").style.display = "none";
 }
 
 function showForSale(){
 
-  document.getElementById("buy_cards").style.display = "block";
+  document.getElementById("buy_cards").style.display = "flex";
   document.getElementById("favorite_cards").style.display = "none";
+  document.getElementById("listings").style.display = "none";
+  document.getElementById("sell").style.display = "none";
 }
+
+function sellProp(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("favorite_cards").style.display = "none";
+  document.getElementById("listings").style.display = "none";
+  document.getElementById("sell").style.display = "flex";
+}
+
+function showListings(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("favorite_cards").style.display = "none";
+  document.getElementById("listings").style.display = "flex";
+  document.getElementById("sell").style.display = "none";
+}
+
+

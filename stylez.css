@@ -99,8 +99,8 @@ button:hover {
 .property_card {
   background-color: darkslategray;
   position: relative;
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 200px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 25px;
@@ -117,6 +117,19 @@ button:hover {
   margin-right: auto;
   margin-left: auto;
   visibility: auto;
-  overflow: scroll;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.sidebutton{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin-right: 2%;
+  margin-left: 2%;
+  border: none;
+  cursor: pointer;
+  width: 96%;
+  opacity: 0.9;
+}
