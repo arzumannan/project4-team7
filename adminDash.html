@@ -15,35 +15,538 @@
 <div class="dash">
     <div class="sidebar">
         <h2>Filter Available Properties:</h2>
-
         <hr>
-        <button type="button" class="sidebutton" onclick="">Most Favorited</button>
+        <button type="button" class="sidebutton" onclick="showAllCards()">All Properties</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="">Highest Rent</button>
+        <button type="button" class="sidebutton" onclick="showMostFav()">Most Favorited</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="">Lowest Rent</button>
+        <button type="button" class="sidebutton" onclick="showHighestRent()">Highest Rent</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="">Short Term Leases</button>
+        <button type="button" class="sidebutton" onclick="showLowestRent()">Lowest Rent</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="">Long Term Leases</button>
+        <button type="button" class="sidebutton" onclick="showShortTerm()">Short Term Leases</button>
+        <hr>
+        <button type="button" class="sidebutton" onclick="showLongTerm()">Long Term Leases</button>
     </div>
     <div class="cards_display" id="buy_cards">
-        <div class="property_card">
-            buy
-        </div>
-        <div class="property_card">
-            buy
-        </div>
-        <div class="property_card">
-            buy
-        </div>
-        <div class="property_card">
-            buy
-        </div>
-        <div class="property_card">
-            buy
+        <div class="property_card" id="house1" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms1" value="3">3</a>
+        <a>Bedroom</a>
+        <a id="bath1">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent1">1350</a>
+        <br>
+        <a id="size1">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length1">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets1">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking1">Street parking</a>
+        <br>
+        <a id="age1">15</a>
+        <a>years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
         </div>
 
+
+        <div class="property_card" id="house2" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms2">3</a>
+        <a>Bedroom</a>
+        <a id="bath2">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent2">1450</a>
+        <br>
+        <a id="size2">1950</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length2">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets2">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking2">Street parking</a>
+        <br>
+        <a id="age2">10 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+   
+
+        <div class="property_card" id="house3" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms3">2</a>
+        <a>Bedroom</a>
+        <a id="bath3">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent3">1600</a>
+        <br>
+        <a id="size3">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length3">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets3">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking3">Street parking</a>
+        <br>
+        <a id="age3">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
+        </div>
+        
+
+        <div class="property_card" id="house4" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms4">3</a>
+        <a>Bedroom</a>
+        <a id="bath4">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent4">1350</a>
+        <br>
+        <a id="size4">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length4">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets4">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking4">Street parking</a>
+        <br>
+        <a id="age4">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card" id="house5" style="display: block;">
+            <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms5">5</a>
+        <a>Bedroom</a>
+        <a id="bath5">4</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent5">1550</a>
+        <br>
+        <a id="size5">1980</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length5">6</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets5">Yes</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking5">No parking</a>
+        <br>
+        <a id="age5">15 years old</a>
+        <br>
+        <a id="number">404-333-2422</a>
+        </div>
+
+        <div class="property_card" id="house6" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms6">6</a>
+        <a>Bedroom</a>
+        <a id="bath6">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent6">1750</a>
+        <br>
+        <a id="size6">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length6">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets6">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking6">Garage</a>
+        <br>
+        <a id="age6">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+    </div>
+    <div class="cards_display" id="most_fav" style="display: none;">
+        <div class="property_card" id="house6" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms6">6</a>
+        <a>Bedroom</a>
+        <a id="bath6">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent6">1750</a>
+        <br>
+        <a id="size6">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length6">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets6">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking6">Garage</a>
+        <br>
+        <a id="age6">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+        <div class="property_card" id="house2" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms2">3</a>
+        <a>Bedroom</a>
+        <a id="bath2">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent2">1450</a>
+        <br>
+        <a id="size2">1950</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length2">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets2">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking2">Street parking</a>
+        <br>
+        <a id="age2">10 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+    </div>
+
+    <div class="cards_display" id="highest_rent" style="display: none;">
+        <div class="property_card" id="house6" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms6">6</a>
+        <a>Bedroom</a>
+        <a id="bath6">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent6">1750</a>
+        <br>
+        <a id="size6">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length6">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets6">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking6">Garage</a>
+        <br>
+        <a id="age6">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+        <div class="property_card" id="house3" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms3">2</a>
+        <a>Bedroom</a>
+        <a id="bath3">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent3">1600</a>
+        <br>
+        <a id="size3">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length3">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets3">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking3">Street parking</a>
+        <br>
+        <a id="age3">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
+        </div>
+
+        <div class="property_card" id="house5" style="display: block;">
+            <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms5">5</a>
+        <a>Bedroom</a>
+        <a id="bath5">4</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent5">1550</a>
+        <br>
+        <a id="size5">1980</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length5">6</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets5">Yes</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking5">No parking</a>
+        <br>
+        <a id="age5">15 years old</a>
+        <br>
+        <a id="number">404-333-2422</a>
+        </div>
+    </div>
+    <div class="cards_display" id="lowest_rent" style="display: none;">
+        <div class="property_card" id="house1" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms1" value="3">3</a>
+        <a>Bedroom</a>
+        <a id="bath1">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent1">1350</a>
+        <br>
+        <a id="size1">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length1">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets1">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking1">Street parking</a>
+        <br>
+        <a id="age1">15</a>
+        <a>years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+
+        <div class="property_card" id="house4" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms4">3</a>
+        <a>Bedroom</a>
+        <a id="bath4">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent4">1350</a>
+        <br>
+        <a id="size4">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length4">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets4">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking4">Street parking</a>
+        <br>
+        <a id="age4">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card" id="house2" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms2">3</a>
+        <a>Bedroom</a>
+        <a id="bath2">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent2">1450</a>
+        <br>
+        <a id="size2">1950</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length2">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets2">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking2">Street parking</a>
+        <br>
+        <a id="age2">10 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+    </div>
+
+    <div class="cards_display" id="short_term" style="display: none;">
+        <div class="property_card" id="house1" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms1" value="3">3</a>
+        <a>Bedroom</a>
+        <a id="bath1">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent1">1350</a>
+        <br>
+        <a id="size1">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length1">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets1">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking1">Street parking</a>
+        <br>
+        <a id="age1">15</a>
+        <a>years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+
+        <div class="property_card" id="house2" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms2">3</a>
+        <a>Bedroom</a>
+        <a id="bath2">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent2">1450</a>
+        <br>
+        <a id="size2">1950</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length2">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets2">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking2">Street parking</a>
+        <br>
+        <a id="age2">10 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+        
+
+        <div class="property_card" id="house4" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms4">3</a>
+        <a>Bedroom</a>
+        <a id="bath4">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent4">1350</a>
+        <br>
+        <a id="size4">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length4">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets4">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking4">Street parking</a>
+        <br>
+        <a id="age4">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card" id="house6" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms6">6</a>
+        <a>Bedroom</a>
+        <a id="bath6">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent6">1750</a>
+        <br>
+        <a id="size6">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length6">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets6">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking6">Garage</a>
+        <br>
+        <a id="age6">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+    </div>
+
+
+    <div class="cards_display" id="long_term" style="display: none;">
+        <div class="property_card" id="house3" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms3">2</a>
+        <a>Bedroom</a>
+        <a id="bath3">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent3">1600</a>
+        <br>
+        <a id="size3">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length3">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets3">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking3">Street parking</a>
+        <br>
+        <a id="age3">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
+        </div>
+
+        <div class="property_card" id="house5" style="display: block;">
+            <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms5">5</a>
+        <a>Bedroom</a>
+        <a id="bath5">4</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent5">1550</a>
+        <br>
+        <a id="size5">1980</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length5">6</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets5">Yes</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking5">No parking</a>
+        <br>
+        <a id="age5">15 years old</a>
+        <br>
+        <a id="number">404-333-2422</a>
+        </div>
     </div>
 
 </div>

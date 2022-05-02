@@ -131,3 +131,58 @@ function displayFilters(){
     }
 }
 
+
+/*Admin Functions */
+function showMostFav(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("most_fav").style.display = "flex";
+  document.getElementById("highest_rent").style.display = "none";
+  document.getElementById("lowest_rent").style.display = "none";
+  document.getElementById("short_term").style.display = "none";
+  document.getElementById("long_term").style.display = "none";
+}
+
+function showHighestRent(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("most_fav").style.display = "none";
+  document.getElementById("highest_rent").style.display = "flex";
+  document.getElementById("lowest_rent").style.display = "none";
+  document.getElementById("short_term").style.display = "none";
+  document.getElementById("long_term").style.display = "none";
+}
+
+function showLowestRent(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("most_fav").style.display = "none";
+  document.getElementById("highest_rent").style.display = "none";
+  document.getElementById("lowest_rent").style.display = "flex";
+  document.getElementById("short_term").style.display = "none";
+  document.getElementById("long_term").style.display = "none";
+}
+
+function showShortTerm(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("most_fav").style.display = "none";
+  document.getElementById("highest_rent").style.display = "none";
+  document.getElementById("lowest_rent").style.display = "none";
+  document.getElementById("short_term").style.display = "flex";
+  document.getElementById("long_term").style.display = "none";
+}
+
+function showLongTerm(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("most_fav").style.display = "none";
+  document.getElementById("highest_rent").style.display = "none";
+  document.getElementById("lowest_rent").style.display = "none";
+  document.getElementById("short_term").style.display = "none";
+  document.getElementById("long_term").style.display = "flex";
+}
+
+function showAllCards(){
+  document.getElementById("buy_cards").style.display = "flex";
+  document.getElementById("most_fav").style.display = "none";
+  document.getElementById("highest_rent").style.display = "none";
+  document.getElementById("lowest_rent").style.display = "none";
+  document.getElementById("short_term").style.display = "none";
+  document.getElementById("long_term").style.display = "none";
+}
