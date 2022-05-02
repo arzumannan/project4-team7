@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Seller Dashboard</title>
+	<title>SubLet.Net</title>
 	<link rel="stylesheet" type="text/css" href="stylez.css">
 
   
@@ -24,161 +24,220 @@
         <hr>
         <button type="button" class="sidebutton" onclick="window.open('propreg.html')">List Selling</button>
     </div>
-    <div class="cards_display" id="filters" style="display: none;">
-        <div class="property_card" style="display: block;">
-            You can filter available properties through the side bar to the right <--
-        </div>
+    <div class="cards_display" id="filters" style="display: none; padding: 25px;">
+            <label for="city"><b>City</b></label>
+                <br>
+              <select name="cities" id="city" size="3">
+                <option value="placeholderCity">Select a City</option>
+                <option value="Atlanta">Atlanta</option>
+                <option value="Charlotte">Charlotte</option>
+              </select>
+              <br><br>
+        
+            <label for="rentPrice"><b>Monthly Rent</b></label>
+                <input type="text" placeholder="Enter Max Rent Price" id="rentPrice" required>
+        
+            <label for="bedrooms"><b>Number of Bedrooms</b></label>
+                <input type="text" placeholder="Enter Minimum Number of Bedrooms" id="bedrooms" required>
+        
+            <label for="bathrooms"><b>Number of Bathrooms</b></label>
+                <input type="text" placeholder="Enter Minimum Number of Bathrooms" id="bathrooms" required>
+        
+            <label for="sqrfootage"><b>Square Footage</b></label>
+                <input type="text" placeholder="Enter Minimum Square Footage" id="sqrfootage" required>
+        
+            <label for="length"><b>Sublease Length?</b></label>
+            <br>
+              <select name="length" id="length" size="3">
+                <option value="placeholderLength">Select Lease Term</option>
+                <option value="5">1-6 months</option>
+                <option value="6">6+ months</option>
+              </select>
+        <br><br>
+        
+            <label for="pets"><b>Are Pets Allowed?</b></label>
+            <br>
+              <select name="cities" id="pets" size="3">
+                <option value="placeholderPets" selected>Select Yes or No</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+        <br><br>
+        
+              <label for="parking"><b>Parking Availability?</b></label>
+              <br>
+              <select name="parking" id="parking" size="3">
+                <option value="placeholderPark" selected>Select the availability</option>
+                <option value="No">No Parking</option>
+                <option value="Street parking">Street Parking</option>
+                <option value="deckPark">Parking Deck</option>
+                <option value="Garage">Garage</option>
+              </select>
+              <br><br>
+        
+        
+              <label for="age"><b>Age of Property?</b></label>
+              <br>
+              <select name="age" id="age" size="3">
+                <option value="placeholderAge" selected>Select age in years</option>
+                <option value="newProp">New Property</option>
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="15">15 years</option>
+              </select>
+              <br><br>
     </div>
     <div class="cards_display" id="buy_cards">
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house1" style="display: block;">
             <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
+        <a id="rooms1" value="3">3</a>
         <a>Bedroom</a>
-        <a id="bath">2</a>
+        <a id="bath1">2</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1350</a>
+        <a id="rent1">1350</a>
         <br>
-        <a id="size">1914</a>
+        <a id="size1">1914</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">3</a>
+        <a id="length1">3</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets1">No</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Street parking</a>
+        <a id="parking1">Street parking</a>
         <br>
-        <a id="age">15 years old</a>
+        <a id="age1">15</a>
+        <a>years old</a>
         <br>
         <a id="number">404-234-2443</a>
         </div>
 
 
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house2" style="display: block;">
             <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
+        <a id="rooms2">3</a>
         <a>Bedroom</a>
-        <a id="bath">2</a>
+        <a id="bath2">2</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1350</a>
+        <a id="rent2">1450</a>
         <br>
-        <a id="size">1914</a>
+        <a id="size2">1950</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">3</a>
+        <a id="length2">3</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets2">No</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Street parking</a>
+        <a id="parking2">Street parking</a>
         <br>
-        <a id="age">15 years old</a>
+        <a id="age2">10 years old</a>
         <br>
         <a id="number">404-234-2443</a>
         </div>
    
 
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house3" style="display: block;">
             <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">2</a>
+        <a id="rooms3">2</a>
         <a>Bedroom</a>
-        <a id="bath">1.5</a>
+        <a id="bath3">1.5</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1600</a>
+        <a id="rent3">1600</a>
         <br>
-        <a id="size">1700</a>
+        <a id="size3">1700</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">6+</a>
+        <a id="length3">6+</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets3">No</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Street parking</a>
+        <a id="parking3">Street parking</a>
         <br>
-        <a id="age">10 years old</a>
+        <a id="age3">10 years old</a>
         <br>
         <a id="number">404-993-1829</a>
         </div>
         
 
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house4" style="display: block;">
             <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
+        <a id="rooms4">3</a>
         <a>Bedroom</a>
-        <a id="bath">2</a>
+        <a id="bath4">2</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1350</a>
+        <a id="rent4">1350</a>
         <br>
-        <a id="size">1914</a>
+        <a id="size4">1914</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">3</a>
+        <a id="length4">3</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets4">No</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Street parking</a>
+        <a id="parking4">Street parking</a>
         <br>
-        <a id="age">15 years old</a>
+        <a id="age4">15 years old</a>
         <br>
         <a id="number">404-234-2443</a>
         </div>
 
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house5" style="display: block;">
             <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">5</a>
+        <a id="rooms5">5</a>
         <a>Bedroom</a>
-        <a id="bath">4</a>
+        <a id="bath5">4</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1550</a>
+        <a id="rent5">1550</a>
         <br>
-        <a id="size">1980</a>
+        <a id="size5">1980</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">6</a>
+        <a id="length5">6</a>
         <a>month lease</a>
         <br>
-        <a id="pets">Yes</a>
+        <a id="pets5">Yes</a>
         <a>Pets</a>
         <br>
-        <a id="parking">No parking</a>
+        <a id="parking5">No parking</a>
         <br>
-        <a id="age">15 years old</a>
+        <a id="age5">15 years old</a>
         <br>
         <a id="number">404-333-2422</a>
         </div>
 
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house6" style="display: block;">
             <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">6</a>
+        <a id="rooms6">6</a>
         <a>Bedroom</a>
-        <a id="bath">5</a>
+        <a id="bath6">5</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1750</a>
+        <a id="rent6">1750</a>
         <br>
-        <a id="size">1990</a>
+        <a id="size6">1990</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">5</a>
+        <a id="length6">5</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets6">No</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Garage</a>
+        <a id="parking6">Garage</a>
         <br>
-        <a id="age">10 years old</a>
+        <a id="age6">10 years old</a>
         <br>
         <a id="number">404-224-</a>
         </div>
