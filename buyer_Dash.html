@@ -15,30 +15,304 @@
 <div class="dash">
     <div class="sidebar">
         <h2>Filters</h2>
+
         <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Name
+            <input type="checkbox" id="name" style="margin-bottom:15px"> Pets Allowed
           </label>
+          <br>
+          <label>
+            <input type="checkbox" id="name" style="margin-bottom:15px"> Parking Available
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="name" style="margin-bottom:15px"> Short Term Leases
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="name" style="margin-bottom:15px"> Long Term Leases
+          </label>
+          <br>
+        <button type="button" class="sidebutton" onclick="showFilters()">Filter Properties</button>
+        <hr>
+        
         <hr>
         <button type="button" class="sidebutton" onclick="showFav()">Favorites</button>
         <hr>
         <button type="button" class="sidebutton" onclick="showForSale()">For Sale</button>
     </div>
+    
     <div class="cards_display" id="buy_cards">
-        <div class="property_card">
-
+        <div class="property_card" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">3</a>
+        <a>Bedroom</a>
+        <a id="bath">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1350</a>
+        <br>
+        <a id="size">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
         </div>
 
+
+        <div class="property_card" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">3</a>
+        <a>Bedroom</a>
+        <a id="bath">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1350</a>
+        <br>
+        <a id="size">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+   
+
+        <div class="property_card" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">2</a>
+        <a>Bedroom</a>
+        <a id="bath">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1600</a>
+        <br>
+        <a id="size">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
+        </div>
+        
+
+        <div class="property_card" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">3</a>
+        <a>Bedroom</a>
+        <a id="bath">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1350</a>
+        <br>
+        <a id="size">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card" style="display: block;">
+            <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">5</a>
+        <a>Bedroom</a>
+        <a id="bath">4</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1550</a>
+        <br>
+        <a id="size">1980</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">6</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">Yes</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">No parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-333-2422</a>
+        </div>
+
+        <div class="property_card" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">6</a>
+        <a>Bedroom</a>
+        <a id="bath">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1750</a>
+        <br>
+        <a id="size">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Garage</a>
+        <br>
+        <a id="age">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+
     </div>
+
+
 
     <div class="cards_display" id="favorite_cards" style="display: none">
-        <div class="property_card">
-
+        <div class="property_card_fav" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">3</a>
+        <a>Bedroom</a>
+        <a id="bath">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1350</a>
+        <br>
+        <a id="size">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
         </div>
-        <div class="property_card">
 
+
+   
+
+        <div class="property_card_fav" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">2</a>
+        <a>Bedroom</a>
+        <a id="bath">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1600</a>
+        <br>
+        <a id="size">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
         </div>
+        
+
+        <div class="property_card_fav" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">3</a>
+        <a>Bedroom</a>
+        <a id="bath">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1350</a>
+        <br>
+        <a id="size">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Street parking</a>
+        <br>
+        <a id="age">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card_fav" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms">6</a>
+        <a>Bedroom</a>
+        <a id="bath">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent">1750</a>
+        <br>
+        <a id="size">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking">Garage</a>
+        <br>
+        <a id="age">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+
+        
 
     </div>
+
+
+   
+
 </div>
 
 <script src="./loginjs.js" type="text/javascript"></script>
