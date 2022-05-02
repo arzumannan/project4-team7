@@ -99,12 +99,14 @@ button:hover {
 .property_card {
   background-color: darkslategray;
   position: relative;
-  height: 300px;
+  height: 350px;
   width: 200px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 25px;
   margin-top: 10px;
+  text-align: center;
+  color: white;
 }
 
 .cards_display {
@@ -132,4 +134,11 @@ button:hover {
   cursor: pointer;
   width: 96%;
   opacity: 0.9;
+}
+
+img {
+  padding: 10px;
+  width: 190px;
+  height: 200px;
+  border-radius: 25px;
 }
