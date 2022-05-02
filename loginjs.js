@@ -12,33 +12,29 @@ function checkAdmin(){
 
 /*functions for buyer dashboard  */
 function showFav(){
-
     document.getElementById("buy_cards").style.display = "none";
     document.getElementById("favorite_cards").style.display = "flex";
     document.getElementById("listings").style.display = "none";
-    document.getElementById("sell").style.display = "none";
 }
 
 function showForSale(){
-
   document.getElementById("buy_cards").style.display = "flex";
   document.getElementById("favorite_cards").style.display = "none";
   document.getElementById("listings").style.display = "none";
-  document.getElementById("sell").style.display = "none";
-}
-
-function sellProp(){
-  document.getElementById("buy_cards").style.display = "none";
-  document.getElementById("favorite_cards").style.display = "none";
-  document.getElementById("listings").style.display = "none";
-  document.getElementById("sell").style.display = "flex";
 }
 
 function showListings(){
   document.getElementById("buy_cards").style.display = "none";
   document.getElementById("favorite_cards").style.display = "none";
   document.getElementById("listings").style.display = "flex";
-  document.getElementById("sell").style.display = "none";
+
 }
 
+function loadBuyer(){
+  console.log("hey");
+  var card = document.createElement('div');
+  card.classList.add('property_card');
+  document.getElementById("listings").appendChild(card);
+
+}
 
