@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Buyer Dashboard</title>
+	<title>SubLet.Net</title>
 	<link rel="stylesheet" type="text/css" href="stylez.css">
 
   
@@ -14,35 +14,236 @@
 	
 <div class="dash">
     <div class="sidebar">
-        <h2>Filters</h2>
-
-        <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Pets Allowed
-          </label>
-          <br>
-          <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Parking Available
-          </label>
-          <br>
-          <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Short Term Leases
-          </label>
-          <br>
-          <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Long Term Leases
-          </label>
-          <br>
-        <button type="button" class="sidebutton" onclick="showFilters()">Filter Properties</button>
+        <button type="button" class="sidebutton" onclick="showFiltersBuyer()">Filters</button>
         <hr>
-        
+        <button type="button" class="sidebutton" onclick="showFavBuyer()">Favorites</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="showFav()">Favorites</button>
+        <button type="button" class="sidebutton" onclick="showForSaleBuyer()">For Sale</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="showForSale()">For Sale</button>
     </div>
-    
+    <div class="cards_display" id="filters" style="display: none; padding: 25px;">
+            <label for="city"><b>City</b></label>
+                <br>
+              <select name="cities" id="city" size="3">
+                <option value="placeholderCity">Select a City</option>
+                <option value="Atlanta">Atlanta</option>
+                <option value="Charlotte">Charlotte</option>
+              </select>
+              <br><br>
+        
+            <label for="rentPrice"><b>Monthly Rent</b></label>
+                <input type="text" placeholder="Enter Max Rent Price" id="rentPrice" required>
+        
+            <label for="bedrooms"><b>Number of Bedrooms</b></label>
+                <input type="text" placeholder="Enter Minimum Number of Bedrooms" id="bedrooms" required>
+        
+            <label for="bathrooms"><b>Number of Bathrooms</b></label>
+                <input type="text" placeholder="Enter Minimum Number of Bathrooms" id="bathrooms" required>
+        
+            <label for="sqrfootage"><b>Square Footage</b></label>
+                <input type="text" placeholder="Enter Minimum Square Footage" id="sqrfootage" required>
+        
+            <label for="length"><b>Sublease Length?</b></label>
+            <br>
+              <select name="length" id="length" size="3">
+                <option value="placeholderLength">Select Lease Term</option>
+                <option value="5">1-6 months</option>
+                <option value="6">6+ months</option>
+              </select>
+        <br><br>
+        
+            <label for="pets"><b>Are Pets Allowed?</b></label>
+            <br>
+              <select name="cities" id="pets" size="3">
+                <option value="placeholderPets" selected>Select Yes or No</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+        <br><br>
+        
+              <label for="parking"><b>Parking Availability?</b></label>
+              <br>
+              <select name="parking" id="parking" size="3">
+                <option value="placeholderPark" selected>Select the availability</option>
+                <option value="No">No Parking</option>
+                <option value="Street parking">Street Parking</option>
+                <option value="deckPark">Parking Deck</option>
+                <option value="Garage">Garage</option>
+              </select>
+              <br><br>
+        
+        
+              <label for="age"><b>Age of Property?</b></label>
+              <br>
+              <select name="age" id="age" size="3">
+                <option value="placeholderAge" selected>Select age in years</option>
+                <option value="newProp">New Property</option>
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="15">15 years</option>
+              </select>
+              <br><br>
+    </div>
     <div class="cards_display" id="buy_cards">
-        <div class="property_card" style="display: block;">
+        <div class="property_card" id="house1" style="display: block;">
+            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms1" value="3">3</a>
+        <a>Bedroom</a>
+        <a id="bath1">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent1">1350</a>
+        <br>
+        <a id="size1">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length1">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets1">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking1">Street parking</a>
+        <br>
+        <a id="age1">15</a>
+        <a>years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+
+        <div class="property_card" id="house2" style="display: block;">
+            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms2">3</a>
+        <a>Bedroom</a>
+        <a id="bath2">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent2">1450</a>
+        <br>
+        <a id="size2">1950</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length2">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets2">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking2">Street parking</a>
+        <br>
+        <a id="age2">10 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+   
+
+        <div class="property_card" id="house3" style="display: block;">
+            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms3">2</a>
+        <a>Bedroom</a>
+        <a id="bath3">1.5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent3">1600</a>
+        <br>
+        <a id="size3">1700</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length3">6+</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets3">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking3">Street parking</a>
+        <br>
+        <a id="age3">10 years old</a>
+        <br>
+        <a id="number">404-993-1829</a>
+        </div>
+        
+
+        <div class="property_card" id="house4" style="display: block;">
+            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms4">3</a>
+        <a>Bedroom</a>
+        <a id="bath4">2</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent4">1350</a>
+        <br>
+        <a id="size4">1914</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length4">3</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets4">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking4">Street parking</a>
+        <br>
+        <a id="age4">15 years old</a>
+        <br>
+        <a id="number">404-234-2443</a>
+        </div>
+
+        <div class="property_card" id="house5" style="display: block;">
+            <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms5">5</a>
+        <a>Bedroom</a>
+        <a id="bath5">4</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent5">1550</a>
+        <br>
+        <a id="size5">1980</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length5">6</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets5">Yes</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking5">No parking</a>
+        <br>
+        <a id="age5">15 years old</a>
+        <br>
+        <a id="number">404-333-2422</a>
+        </div>
+
+        <div class="property_card" id="house6" style="display: block;">
+            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
+        <a id="rooms6">6</a>
+        <a>Bedroom</a>
+        <a id="bath6">5</a>
+        <a>Bath</a>
+        <a>Rent $</a>
+        <a id="rent6">1750</a>
+        <br>
+        <a id="size6">1990</a>
+        <a>Sqrft</a>
+        <br>
+        <a id="length6">5</a>
+        <a>month lease</a>
+        <br>
+        <a id="pets6">No</a>
+        <a>Pets</a>
+        <br>
+        <a id="parking6">Garage</a>
+        <br>
+        <a id="age6">10 years old</a>
+        <br>
+        <a id="number">404-224-</a>
+        </div>
+
+    </div>
+
+    <!-- favorited cards -->
+    <div class="cards_display" id="favorite_cards" style="display: none">
+        <div class="property_card_fav"style="display: block;">
             <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
         <a id="rooms">3</a>
         <a>Bedroom</a>
@@ -66,35 +267,8 @@
         <br>
         <a id="number">404-234-2443</a>
         </div>
-
-
-        <div class="property_card" style="display: block;">
-            <img src="h2.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
-        <a>Bedroom</a>
-        <a id="bath">2</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1350</a>
-        <br>
-        <a id="size">1914</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">3</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Street parking</a>
-        <br>
-        <a id="age">15 years old</a>
-        <br>
-        <a id="number">404-234-2443</a>
-        </div>
-   
-
-        <div class="property_card" style="display: block;">
+        
+        <div class="property_card_fav" style="display: block;">
             <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
         <a id="rooms">2</a>
         <a>Bedroom</a>
@@ -118,34 +292,8 @@
         <br>
         <a id="number">404-993-1829</a>
         </div>
-        
 
-        <div class="property_card" style="display: block;">
-            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
-        <a>Bedroom</a>
-        <a id="bath">2</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1350</a>
-        <br>
-        <a id="size">1914</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">3</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Street parking</a>
-        <br>
-        <a id="age">15 years old</a>
-        <br>
-        <a id="number">404-234-2443</a>
-        </div>
-
-        <div class="property_card" style="display: block;">
+        <div class="property_card_fav"style="display: block;">
             <img src="h5.jpeg" style="width:190px;height:200px;" alt="property">
         <a id="rooms">5</a>
         <a>Bedroom</a>
@@ -170,149 +318,45 @@
         <a id="number">404-333-2422</a>
         </div>
 
-        <div class="property_card" style="display: block;">
-            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">6</a>
-        <a>Bedroom</a>
-        <a id="bath">5</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1750</a>
-        <br>
-        <a id="size">1990</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">5</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Garage</a>
-        <br>
-        <a id="age">10 years old</a>
-        <br>
-        <a id="number">404-224-</a>
-        </div>
+        
 
+    </div>
+    
+   
 
+        
+        
+
+        
     </div>
 
 
-
-    <div class="cards_display" id="favorite_cards" style="display: none">
-        <div class="property_card_fav" style="display: block;">
-            <img src="h1.jpeg" style="width:190px;height:200px;" alt="property">
+    <!-- <div class="property_card" id="duplicate_this" style="display: block">
+        <img src="data:image/png;base64,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" alt="property">
         <a id="rooms">3</a>
         <a>Bedroom</a>
         <a id="bath">2</a>
         <a>Bath</a>
         <a>Rent $</a>
-        <a id="rent">1350</a>
+        <a id="rent">1500</a>
         <br>
-        <a id="size">1914</a>
+        <a id="size">2500</a>
         <a>Sqrft</a>
         <br>
-        <a id="length">3</a>
+        <a id="length">6</a>
         <a>month lease</a>
         <br>
-        <a id="pets">No</a>
+        <a id="pets">Yes</a>
         <a>Pets</a>
         <br>
-        <a id="parking">Street parking</a>
+        <a id="parking">No parking</a>
         <br>
-        <a id="age">15 years old</a>
+        <a id="age">5 years old</a>
         <br>
-        <a id="number">404-234-2443</a>
-        </div>
-
-
-   
-
-        <div class="property_card_fav" style="display: block;">
-            <img src="h3.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">2</a>
-        <a>Bedroom</a>
-        <a id="bath">1.5</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1600</a>
-        <br>
-        <a id="size">1700</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">6+</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Street parking</a>
-        <br>
-        <a id="age">10 years old</a>
-        <br>
-        <a id="number">404-993-1829</a>
-        </div>
+        <a id="number">770-644-2453</a>
         
-
-        <div class="property_card_fav" style="display: block;">
-            <img src="h4.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">3</a>
-        <a>Bedroom</a>
-        <a id="bath">2</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1350</a>
-        <br>
-        <a id="size">1914</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">3</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Street parking</a>
-        <br>
-        <a id="age">15 years old</a>
-        <br>
-        <a id="number">404-234-2443</a>
-        </div>
-
-        <div class="property_card_fav" style="display: block;">
-            <img src="h6.jpeg" style="width:190px;height:200px;" alt="property">
-        <a id="rooms">6</a>
-        <a>Bedroom</a>
-        <a id="bath">5</a>
-        <a>Bath</a>
-        <a>Rent $</a>
-        <a id="rent">1750</a>
-        <br>
-        <a id="size">1990</a>
-        <a>Sqrft</a>
-        <br>
-        <a id="length">5</a>
-        <a>month lease</a>
-        <br>
-        <a id="pets">No</a>
-        <a>Pets</a>
-        <br>
-        <a id="parking">Garage</a>
-        <br>
-        <a id="age">10 years old</a>
-        <br>
-        <a id="number">404-224-</a>
-        </div>
-
-
         
-
-    </div>
-
-
-   
-
+    </div> -->
 </div>
 
 <script src="./loginjs.js" type="text/javascript"></script>

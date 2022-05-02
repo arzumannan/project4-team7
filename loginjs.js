@@ -42,6 +42,24 @@ function showFilters(){
   document.getElementById("filters").style.display = "block";
 }
 
+function showFiltersBuyer(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("favorite_cards").style.display = "none";
+  document.getElementById("filters").style.display = "block";
+}
+function showForSaleBuyer(){
+  document.getElementById("buy_cards").style.display = "flex";
+  document.getElementById("favorite_cards").style.display = "none";
+  document.getElementById("filters").style.display = "none";
+  displayFilters();
+}
+function showFavBuyer(){
+  document.getElementById("buy_cards").style.display = "none";
+  document.getElementById("favorite_cards").style.display = "flex";
+  document.getElementById("filters").style.display = "none";
+}
+
+
 var i = 0;
 
 function loadBuyer(){
