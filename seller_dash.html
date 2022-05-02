@@ -3,18 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Seller Dashboard</title>
+	<title>Buyer Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="stylez.css">
 
   
   
 </head>
-<body onload="loadBuyer()">
+<body>
 
 	
 <div class="dash">
     <div class="sidebar">
-        <button type="button" class="sidebutton" onclick="showFilters()">Filters</button>
+        <h2>Filters</h2>
+        <label>
+            <input type="checkbox" id="name" style="margin-bottom:15px"> Name
+          </label>
         <hr>
         <button type="button" class="sidebutton" onclick="showFav()">Favorites</button>
         <hr>
@@ -22,10 +25,7 @@
         <hr>
         <button type="button" class="sidebutton" onclick="showListings()">Your Listings</button>
         <hr>
-        <button type="button" class="sidebutton" onclick="window.open('propreg.html')">List Selling</button>
-    </div>
-    <div class="cards_display" id="filters" style="display: none">
-        filters
+        <button type="button" class="sidebutton" onclick="sellProp()">List Selling</button>
     </div>
     <div class="cards_display" id="buy_cards">
         <div class="property_card">
@@ -62,13 +62,33 @@
 
     </div>
     <div class="cards_display" id="listings" style="display: none">
-        <div class="property_card" id="listing_card">
+        <div class="property_card">
+            list
+        </div>
+        <div class="property_card">
+            list
+        </div>
+        <div class="property_card">
+            list
+        </div>
+        <div class="property_card">
             list
         </div>
 
     </div>
-
-    <div class="property_card" id="duplicate_this" style="display: none">
+    <div class="cards_display" id="sell" style="display: none">
+        <div class="property_card">
+            sell
+        </div>
+        <div class="property_card">
+            sell
+        </div>
+        <div class="property_card">
+            sell
+        </div>
+        <div class="property_card">
+            sell
+        </div>
 
     </div>
 </div>
