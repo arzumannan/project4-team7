@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="action_page.php" style="border:1px solid #ccc">
+	<form name="registration" style="border:1px solid #ccc" onSubmit="return formValidation();">
   <div class="container">
     <h1>New User Registration</h1>
     <p>Please fill in this form to create your account.</p>
@@ -21,10 +21,10 @@
     <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="password" required>
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="password" placeholder="Repeat Password" name="pswrepeat" required>
 
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -40,4 +40,72 @@
 </form>
 
 </body>
+
+<script type="text/javascript">
+  
+  function formValidation()
+{
+var uid = document.registration.username;
+var passid = document.registration.password;
+var passidr = document.registration.pswrepeat;
+var uemail = document.registration.email;
+
+
+
+if(userid_validation(uid,5,12))
+{
+if(ValidateEmail(uemail))
+{
+if(passid_validation(passid,7,12))
+{
+{
+}
+} 
+} 
+}
+return false;
+}
+
+function userid_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= my || uid_len < mx)
+{
+alert("Username should not be empty. It's length must be between "+mx+" to "+my);
+uid.focus();
+return false;
+}
+return true;
+}
+
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+alert("Password should not be empty. It's length must be between "+mx+" to "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
+
+
+
+</script>
 </html>
