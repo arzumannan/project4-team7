@@ -14,10 +14,7 @@
 	
 <div class="dash">
     <div class="sidebar">
-        <h2>Filters</h2>
-        <label>
-            <input type="checkbox" id="name" style="margin-bottom:15px"> Name
-          </label>
+        <button type="button" class="sidebutton" onclick="showFilters()">Filters</button>
         <hr>
         <button type="button" class="sidebutton" onclick="showFav()">Favorites</button>
         <hr>
@@ -26,6 +23,9 @@
         <button type="button" class="sidebutton" onclick="showListings()">Your Listings</button>
         <hr>
         <button type="button" class="sidebutton" onclick="window.open('propreg.html')">List Selling</button>
+    </div>
+    <div class="cards_display" id="filters" style="display: none">
+        filters
     </div>
     <div class="cards_display" id="buy_cards">
         <div class="property_card">
@@ -68,7 +68,7 @@
 
     </div>
 
-    <div class="property_card" id="duplicate_this">
+    <div class="property_card" id="duplicate_this" style="display: none">
 
     </div>
 </div>
